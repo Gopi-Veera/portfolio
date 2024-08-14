@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   imports: [
     CommonModule,
     MatSlideToggleModule,
@@ -26,10 +26,41 @@ import { RouterModule } from '@angular/router';
   ],
 })
 export class AppComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav;
   isExpanded = false;
   isShowing = false;
   sidenavWidth = 4;
+  sidenavData = [
+    {
+      icon: 'home',
+      title: 'Home',
+      routerLink: '/portfolio/home',
+    },
+    {
+      icon: 'person',
+      title: 'About me',
+      routerLink: '/portfolio/aboutme',
+    },
+    {
+      icon: 'code',
+      title: 'Skills',
+      routerLink: '/portfolio/skills',
+    },
+    {
+      icon: 'web',
+      title: 'Works',
+      routerLink: '/portfolio/works',
+    },
+    {
+      icon: 'article',
+      title: 'Blogs',
+      routerLink: '/portfolio/blogs',
+    },
+    {
+      icon: 'call',
+      title: 'Contact',
+      routerLink: '/portfolio/contact',
+    },
+  ];
 
   mouseenter() {
     if (!this.isExpanded) {

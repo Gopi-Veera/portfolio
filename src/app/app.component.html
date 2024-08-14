@@ -1,6 +1,5 @@
 <mat-sidenav-container class="example-container" autosize>
   <mat-sidenav
-    #sidenav
     class="example-sidenav"
     [ngStyle]="{ 'width.em': sidenavWidth }"
     mode="side"
@@ -12,45 +11,18 @@
       <mat-list-item (click)="isExpanded = !isExpanded">
         <mat-icon mat-list-icon>menu</mat-icon>
       </mat-list-item>
-      <mat-list-item [routerLink]="['/portfolio/home']">
-        <div class="items">
-          <mat-icon mat-list-icon>home</mat-icon>
-          <span *ngIf="isExpanded || isShowing">Home</span>
-        </div>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/portfolio/aboutme']">
-        <div class="items">
-          <mat-icon mat-list-icon>person</mat-icon>
-          <span *ngIf="isExpanded || isShowing">About Me</span>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="items">
-          <mat-icon mat-list-icon>code</mat-icon>
-          <span *ngIf="isExpanded || isShowing">Skills</span>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="items">
-          <mat-icon mat-list-icon>web</mat-icon>
-          <span *ngIf="isExpanded || isShowing">Works</span>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="items">
-          <mat-icon mat-list-icon>article</mat-icon>
-          <span *ngIf="isExpanded || isShowing">Blogs</span>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="items">
-          <mat-icon mat-list-icon>call</mat-icon>
-          <span *ngIf="isExpanded || isShowing">Contact</span>
-        </div>
-      </mat-list-item>
+
+      @for (data of sidenavData; track data.icon) {
+        <mat-list-item [routerLink]="[data.routerLink]">
+          <div class="items">
+            <mat-icon mat-list-icon>{{ data.icon }}</mat-icon>
+            <span *ngIf="isExpanded || isShowing">{{ data.title }}</span>
+          </div>
+        </mat-list-item>
+      }
     </mat-nav-list>
   </mat-sidenav>
-  <div class="example-sidenav-content">
+  <div>
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>

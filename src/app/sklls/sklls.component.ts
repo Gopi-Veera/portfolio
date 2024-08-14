@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './sklls.component.html',
-  styleUrl: './sklls.component.css'
+  styleUrl: './sklls.component.scss'
 })
 export class SkllsComponent {
 
