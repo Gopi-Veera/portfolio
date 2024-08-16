@@ -1,0 +1,6 @@
+// Change the Meterail icon size
+@mixin md-icons-size($size: 24px) {
+  font-size: $size;
+  height: $size !important;
+  width: $size !important;
+}

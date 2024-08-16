@@ -1,0 +1,28 @@
+@import "../globals/mixins";
+
+.md-icon {
+  &-xxs {
+    @include md-icons-size(4px);
+  }
+  &-xs {
+    @include md-icons-size(8px);
+  }
+  &-s {
+    @include md-icons-size(12px);
+  }
+  &-m {
+    @include md-icons-size(16px);
+  }
+  &-l {
+    @include md-icons-size(20px);
+  }
+  &-xl {
+    @include md-icons-size(24px);
+  }
+  &-xxl {
+    @include md-icons-size(28px);
+  }
+  &-xxl-2 {
+    @include md-icons-size(32px);
+  }
+}
