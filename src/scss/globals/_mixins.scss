@@ -4,3 +4,18 @@
   height: $size !important;
   width: $size !important;
 }
+
+// circle with white background and dynamic height/width
+@mixin circle($height, $width) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+  width: $width;
+  border-radius: 50%;
+  background-color: #e8eaeb;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
