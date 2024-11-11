@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { SkllsComponent } from './sklls/sklls.component';
+import { SkllsComponent } from './skills/skills.component';
 import { WorksComponent } from './works/works.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
