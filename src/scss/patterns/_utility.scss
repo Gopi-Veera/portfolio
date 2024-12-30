@@ -14,11 +14,24 @@
   width: 80px;
 }
 
-.text-grad {
+// .text-grad {
+//   @extend .linear-gradient;
+//   color: transparent;
+//   background-clip: text;
+//   font-weight: 700;
+//   font-size: 48px;
+//   line-height: 48px;
+// }
+
+.text-gradient {
+  // background: linear-gradient(
+  //   to left,
+  //   rgb(255, 177, 77, 1),
+  //   rgb(255, 108, 99, 1),
+  //   rgb(184, 106, 223, 1)
+  // );
   @extend .linear-gradient;
-  color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 48px;
+  -webkit-text-fill-color: transparent;
 }

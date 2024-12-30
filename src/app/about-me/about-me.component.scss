@@ -89,3 +89,7 @@ img {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
+.name-grad {
+  @include text-grad(48px, 48px);
+}
