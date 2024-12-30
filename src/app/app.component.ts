@@ -51,11 +51,6 @@ export class AppComponent {
       routerLink: '/portfolio/works',
     },
     {
-      icon: 'article',
-      title: 'Blogs',
-      routerLink: '/portfolio/blogs',
-    },
-    {
       icon: 'call',
       title: 'Contact',
       routerLink: '/portfolio/contact',
