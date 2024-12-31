@@ -1,3 +1,4 @@
+@import "../patterns/utility";
 // Change the Meterail icon size
 @mixin md-icons-size($size: 24px) {
   font-size: $size;
@@ -18,4 +19,13 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+@mixin text-grad($font, $line-height) {
+  @extend .linear-gradient;
+  color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: $font;
+  line-height: $line-height;
 }
