@@ -1,0 +1,96 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="form-body">
+    <div class="input-group">
+      <label for="name" class="input-label">Name&nbsp;&#42;</label>
+      <input
+        type="text"
+        class="details-input"
+        id="name"
+        matInput
+        placeholder="Enter your full name"
+        maxlength="32"
+        formControlName="name"
+      />
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <div class="alert failure" *ngIf="name?.hasError('required')">
+          Name is required.
+        </div>
+        <div class="alert failure" *ngIf="name?.hasError('minlength')">
+          Name must be at least 4 characters long.
+        </div>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="email" class="input-label">Email address&nbsp;&#42;</label>
+      <input
+        class="details-input"
+        type="email"
+        id="email"
+        matInput
+        placeholder="Enter your email address"
+        formControlName="email"
+        maxlength="64"
+      />
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        <div class="alert failure" *ngIf="email?.hasError('required')">
+          Email is required.
+        </div>
+        <div class="alert failure" *ngIf="email?.hasError('email')">
+          Please enter a valid email.
+        </div>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="phone" class="input-label">Phone number&nbsp;&#42;</label>
+      <input
+        class="details-input"
+        id="phone"
+        matInput
+        placeholder="Enter your phone number"
+        formControlName="phone"
+        maxlength="20"
+      />
+      <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+        <div class="alert failure" *ngIf="phone?.hasError('required')">
+          Phone number is required.
+        </div>
+        <div class="alert failure" *ngIf="phone?.hasError('maxlength')">
+          Phone number can be a maximum of 15 characters long.
+        </div>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="comments" class="input-label">Comments&nbsp;&#42;</label>
+      <!-- <input class="details-input" id="name" matInput placeholder="Ex. Pizza" /> -->
+      <textarea
+        id="comments"
+        name="w3review"
+        rows="4"
+        placeholder="Enter your comments"
+        formControlName="comments"
+      ></textarea>
+      <div *ngIf="comments?.invalid && (comments?.dirty || comments?.touched)">
+        <div class="alert failure" *ngIf="comments?.hasError('required')">
+          Comments are welcome.
+        </div>
+      </div>
+    </div>
+    <div class="input-group">
+      <div class="submit spacer-out-top-xl">
+        <button
+          mat-fab
+          extended
+          color="primary"
+          type="submit"
+          [disabled]="!contactForm.valid"
+        >
+          Submit
+          <mat-icon>send</mat-icon>
+        </button>
+        <div class="alert success" *ngIf="submitStatus">
+          {{ submitMsg }}
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
