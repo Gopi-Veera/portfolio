@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
-import { TitleDescriptionComponent } from './title-description/title-description.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { SkillsSetComponent } from "./skills-set/skills-set.component";
+import { SkillsSetComponent } from './skills-set/skills-set.component';
+import { SkillsSummaryComponent } from './skills-summary/skills-summary.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [
-    TitleDescriptionComponent,
-    TitleDescriptionComponent,
-    ExperienceComponent,
-    SkillsSetComponent
-],
+  imports: [ExperienceComponent, SkillsSetComponent, SkillsSummaryComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })

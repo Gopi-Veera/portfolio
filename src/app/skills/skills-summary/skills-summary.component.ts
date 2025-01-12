@@ -3,10 +3,10 @@ import { TitleComponent } from '../title/title.component';
 import { DescriptionComponent } from '../description/description.component';
 
 @Component({
-  selector: 'app-title-description',
+  selector: 'app-skills-summary',
   standalone: true,
   imports: [TitleComponent, DescriptionComponent],
-  templateUrl: './title-description.component.html',
-  styleUrl: './title-description.component.scss',
+  templateUrl: './skills-summary.component.html',
+  styleUrl: './skills-summary.component.scss',
 })
-export class TitleDescriptionComponent {}
+export class SkillsSummaryComponent {}
