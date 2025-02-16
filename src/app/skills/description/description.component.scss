@@ -4,3 +4,10 @@
   font-weight: 300;
   font-style: italic;
 }
+
+/* Mobile Devices (Phones) - Portrait Mode*/
+@media only screen and (max-width: 480px) {
+  .description {
+    font-size: 18px;
+  }
+}

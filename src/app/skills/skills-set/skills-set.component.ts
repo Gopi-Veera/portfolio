@@ -35,7 +35,6 @@ export class SkillsSetComponent {
       {
         data: [8, 8, 7, 9, 8.5, 9, 7, 9, 8, 5, 5, 7, 6],
         label: 'My Rating',
-        barThickness: 35,
         backgroundColor: [
           'rgba(2, 82, 155, 1)',
           'rgba(2, 82, 155, 1)',

@@ -25,6 +25,10 @@
   overflow-y: hidden;
 }
 
+.flex-base {
+  flex: 0 0 200px;
+}
+
 .item2 {
   grid-area: left-1;
   @extend .grid-item-flex;
@@ -57,6 +61,7 @@
     @extend .main-title;
   }
 }
+
 .item5 {
   grid-area: right-2;
   @extend .grid-item-flex;
@@ -72,9 +77,9 @@
   display: grid;
   grid-template-rows: 1fr 3fr 3fr;
   grid-template-areas:
-    "header header header header header header"
-    "left-1 left-1 left-1 right-1 right-1 right-1"
-    "left-2 left-2 left-2 right-2 right-2 right-2";
+    "header header"
+    "left-1 right-1"
+    "left-2 right-2";
   gap: 40px 104px;
   background-color: #ffffff;
   height: 100vh;
@@ -102,6 +107,85 @@
 }
 
 img {
+  // width: 100%;
+  // min-height: 320px;
   width: 100%;
-  min-height: 320px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-container {
+  width: -webkit-fill-available;
+}
+
+/* Mobile Devices (Phones) - Portrait Mode*/
+@media only screen and (max-width: 480px) {
+  .flex-base {
+    flex: 1 0 130px;
+  }
+  .title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .grid-container {
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      "header header header"
+      "left-1 left-1 left-1"
+      "right-1 right-1 right-1"
+      "left-2 left-2 left-2"
+      "right-2 right-2 right-2";
+    padding: 16px;
+  }
+  .item1 {
+    .top-title {
+      font-size: 24px;
+      .works {
+        @include text-grad(24px, 54.6px);
+      }
+    }
+  }
+}
+
+/* Mobile Devices (Phones) - Landscape Mode*/
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .flex-base {
+    flex: 1 0 160px;
+  }
+  .title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .main-title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .grid-container {
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      "header header header"
+      "left-1 left-1 left-1"
+      "right-1 right-1 right-1"
+      "left-2 left-2 left-2"
+      "right-2 right-2 right-2";
+  }
+}
+
+/* Small Tablets (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      "header header header"
+      "left-1 left-1 left-1"
+      "right-1 right-1 right-1"
+      "left-2 left-2 left-2"
+      "right-2 right-2 right-2";
+  }
 }
