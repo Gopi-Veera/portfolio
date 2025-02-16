@@ -12,10 +12,6 @@
   background: rgba(241, 249, 254, 1);
 }
 
-// .about-container > div {
-//   background-color: rgba(255, 255, 255, 0.8);
-// }
-
 .about-item-1 {
   display: flex;
   flex-flow: column nowrap;
@@ -34,18 +30,7 @@
   grid-template-columns: 2fr 4fr;
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 10px;
-  // background-color: #2196f3;
   height: 100%;
-}
-
-.description {
-  display: inline-block;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 18px;
-  line-height: 20px;
-  inline-size: 175px;
-  overflow-wrap: break-word;
 }
 
 .child-1 {
@@ -121,7 +106,6 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 10px;
-    // background-color: #2196f3;
     height: 100%;
   }
 
@@ -143,7 +127,6 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 10px;
-    // background-color: #2196f3;
     height: 100%;
   }
 
@@ -162,7 +145,6 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 10px;
-    // background-color: #2196f3;
     height: 100%;
   }
 

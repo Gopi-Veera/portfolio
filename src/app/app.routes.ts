@@ -1,9 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { SkllsComponent } from './skills/skills.component';
-import { WorksComponent } from './works/works.component';
-import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -11,23 +6,34 @@ export const routes: Routes = [
     children: [
       {
         path: 'home',
-        component: HomeComponent,
+        loadComponent: () =>
+          import('./home/home.component').then((comp) => comp.HomeComponent),
       },
       {
         path: 'aboutme',
-        component: AboutMeComponent,
+        loadComponent: () =>
+          import('./about-me/about-me.component').then(
+            (comp) => comp.AboutMeComponent,
+          ),
       },
       {
         path: 'skills',
-        component: SkllsComponent,
+        loadComponent: () =>
+          import('./skills/skills.component').then(
+            (comp) => comp.SkllsComponent,
+          ),
       },
       {
         path: 'works',
-        component: WorksComponent,
+        loadComponent: () =>
+          import('./works/works.component').then((comp) => comp.WorksComponent),
       },
       {
         path: 'contact',
-        component: ContactComponent,
+        loadComponent: () =>
+          import('./contact/contact.component').then(
+            (comp) => comp.ContactComponent,
+          ),
       },
       {
         path: '',
