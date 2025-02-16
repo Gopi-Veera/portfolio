@@ -1,11 +1,11 @@
 @import "../../scss/patterns/grid";
 @import "../../scss/patterns/utility";
 @import "../../scss/globals/mixins";
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 15% 85%;
-  grid-gap: 10px;
+  grid-template-rows: 10% 90%;
   // background-color: #2196f3;
   padding: 36px;
   height: 100vh;
@@ -19,7 +19,7 @@
 .about-item-1 {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 4px;
   .title {
@@ -36,6 +36,16 @@
   grid-gap: 10px;
   // background-color: #2196f3;
   height: 100%;
+}
+
+.description {
+  display: inline-block;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 20px;
+  inline-size: 175px;
+  overflow-wrap: break-word;
 }
 
 .child-1 {
@@ -80,6 +90,8 @@
 
 .child-4 {
   @include grid-item(2, 1, 4, 3);
+  align-content: flex-end;
+  gap: 15px;
 }
 
 img {
@@ -92,4 +104,77 @@ img {
 
 .name-grad {
   @include text-grad(48px, 48px);
+}
+
+.cert-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Mobile Devices (Phones) - Portrait Mode*/
+@media only screen and (max-width: 480px) {
+  .about-container {
+    padding: 16px;
+  }
+  .about-item-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+    // background-color: #2196f3;
+    height: 100%;
+  }
+
+  .child-1 {
+    display: none;
+  }
+  .child-2 {
+    flex-flow: row wrap;
+    row-gap: 15px;
+  }
+}
+
+/* Mobile Devices (Phones) - Landscape Mode*/
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .about-container {
+    padding: 24px;
+  }
+  .about-item-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+    // background-color: #2196f3;
+    height: 100%;
+  }
+
+  .child-1 {
+    display: none;
+  }
+  .child-2 {
+    flex-flow: row wrap;
+    row-gap: 15px;
+  }
+}
+
+/* Small Tablets (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-item-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+    // background-color: #2196f3;
+    height: 100%;
+  }
+
+  .child-1 {
+    display: none;
+  }
+}
+
+/* Large Tablets (Landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Large Devices (Laptops/Desktops) */
+@media only screen and (min-width: 1281px) {
 }
