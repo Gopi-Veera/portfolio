@@ -33,27 +33,27 @@ export class AppComponent {
     {
       icon: 'home',
       title: 'Home',
-      routerLink: '/portfolio/home',
+      routerLink: 'home',
     },
     {
       icon: 'person',
       title: 'About me',
-      routerLink: '/portfolio/aboutme',
+      routerLink: 'aboutme',
     },
     {
       icon: 'code',
       title: 'Skills',
-      routerLink: '/portfolio/skills',
+      routerLink: 'skills',
     },
     {
       icon: 'web',
       title: 'Works',
-      routerLink: '/portfolio/works',
+      routerLink: 'works',
     },
     {
       icon: 'call',
       title: 'Contact',
-      routerLink: '/portfolio/contact',
+      routerLink: 'contact',
     },
   ];
 

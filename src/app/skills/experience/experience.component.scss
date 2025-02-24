@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 24px 10px;
   height: 100%;
@@ -35,7 +35,7 @@
 .grid-item {
   color: #ffffff;
   &.item-1 {
-    grid-area: 1 / 1 / span 1 / span 3;
+    grid-area: 1 / 1 / span 1 / span 5;
   }
 
   &.item-2 {
@@ -49,13 +49,21 @@
   &.item-4 {
     grid-area: 2 / 3 / span 1 / span 1;
   }
+
+  &.item-5 {
+    grid-area: 2 / 4 / span 1 / span 1;
+  }
+
+  &.item-6 {
+    grid-area: 2 / 5 / span 1 / span 1;
+  }
 }
 
 /* Mobile Devices (Phones) - Portrait Mode*/
 @media only screen and (max-width: 480px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(6, auto);
   }
 
   .subtitle {
@@ -73,24 +81,38 @@
     color: #ffffff;
     &.item-1 {
       grid-area: 1 / 1 / span 1 / span 1;
-      width: min-content;
+      // width: min-content;
     }
 
     &.item-2 {
       grid-area: 2 / 1 / span 1 / span 1;
-      width: min-content;
+      // width: min-content;
     }
 
     &.item-3 {
       grid-area: 3 / 1 / span 1 / span 1;
-      width: min-content;
+      // width: min-content;
       border-top: 1px solid;
       padding-top: 15px;
     }
 
     &.item-4 {
       grid-area: 4 / 1 / span 1 / span 1;
-      width: min-content;
+      // width: min-content;
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+    &.item-5 {
+      grid-area: 5 / 1 / span 1 / span 1;
+      // width: min-content;
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+    &.item-6 {
+      grid-area: 6 / 1 / span 1 / span 1;
+      // width: min-content;
       border-top: 1px solid;
       padding-top: 15px;
     }
@@ -101,7 +123,7 @@
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(6, auto);
   }
 
   .grid-item {
@@ -122,6 +144,18 @@
 
     &.item-4 {
       grid-area: 4 / 1 / span 1 / span 1;
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+    &.item-5 {
+      grid-area: 5 / 1 / span 1 / span 1;
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+    &.item-6 {
+      grid-area: 6 / 1 / span 1 / span 1;
       border-top: 1px solid;
       padding-top: 15px;
     }
@@ -132,7 +166,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(6, auto);
   }
 
   .grid-item {
@@ -153,6 +187,18 @@
 
     &.item-4 {
       grid-area: 4 / 1 / span 1 / span 1;
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+    &.item-5 {
+      grid-area: 5 / 1 / span 1 / span 1;
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+    &.item-6 {
+      grid-area: 6 / 1 / span 1 / span 1;
       border-top: 1px solid;
       padding-top: 15px;
     }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { CarouselComponent } from './carousel/carousel.component';
+// import { CarouselComponent } from './carousel/carousel.component';
+import { OwlCarouselComponent } from './owl-carousel/owl-carousel.component';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [CarouselComponent],
+  imports: [OwlCarouselComponent],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })

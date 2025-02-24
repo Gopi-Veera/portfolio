@@ -1,0 +1,9 @@
+<owl-carousel-o [options]="carouselOptions">
+  <ng-container *ngFor="let p of products">
+    <ng-template carouselSlide>
+      <div class="spacer-in-right-s">
+        <img class="product" [src]="p.img" [alt]="p.alt" />
+      </div>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
