@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'portfolio',
+    path: '',
     children: [
       {
         path: 'home',
@@ -41,10 +41,5 @@ export const routes: Routes = [
         redirectTo: 'home',
       },
     ],
-  },
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'portfolio',
   },
 ];

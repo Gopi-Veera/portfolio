@@ -13,8 +13,13 @@ body {
 }
 
 /* You can add global styles to this file, and also import other style files */
+
+// meterial library
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+// owl-carousel library
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 //Globals
 @import "globals/mixins";
 
