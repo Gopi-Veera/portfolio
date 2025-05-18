@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --base-href=https://gopi-veera.github.io/portfolio/",
+    "deploy": "npx angular-cli-ghpages --dir=dist/portfolio",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
