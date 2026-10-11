@@ -73,13 +73,25 @@
   }
 }
 
+.item6 {
+  grid-area: full-3;
+  @extend .grid-item-flex;
+  .title {
+    @extend .title;
+  }
+  .main-title {
+    @extend .main-title;
+  }
+}
+
 .grid-container {
   display: grid;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-rows: 1fr 3fr 3fr 3fr;
   grid-template-areas:
     "header header"
     "left-1 right-1"
-    "left-2 right-2";
+    "left-2 right-2"
+    "full-3 full-3";
   gap: 40px 104px;
   background-color: #ffffff;
   height: 100vh;
@@ -143,13 +155,14 @@ img {
     line-height: 20px;
   }
   .grid-container {
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
     grid-template-areas:
       "header header header"
       "left-1 left-1 left-1"
       "right-1 right-1 right-1"
       "left-2 left-2 left-2"
-      "right-2 right-2 right-2";
+      "right-2 right-2 right-2"
+      "full-3 full-3 full-3";
     padding: 16px;
   }
   .item1 {
@@ -177,25 +190,27 @@ img {
     line-height: 26px;
   }
   .grid-container {
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
     grid-template-areas:
       "header header header"
       "left-1 left-1 left-1"
       "right-1 right-1 right-1"
       "left-2 left-2 left-2"
-      "right-2 right-2 right-2";
+      "right-2 right-2 right-2"
+      "full-3 full-3 full-3";
   }
 }
 
 /* Small Tablets (Portrait) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .grid-container {
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
     grid-template-areas:
       "header header header"
       "left-1 left-1 left-1"
       "right-1 right-1 right-1"
       "left-2 left-2 left-2"
-      "right-2 right-2 right-2";
+      "right-2 right-2 right-2"
+      "full-3 full-3 full-3";
   }
 }
