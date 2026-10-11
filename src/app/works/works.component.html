@@ -11,7 +11,14 @@
       <div class="main-title spacer-out-top-m">Change Guardian</div>
     </div>
     <div class="img-container">
-      <img src="assets/images/cg.png" alt="Change Guardian" />
+      <img
+        src="assets/images/cg.png"
+        alt="Change Guardian"
+        tabindex="0"
+        role="button"
+        (click)="openImage('assets/images/cg.png', 'Change Guardian')"
+        (keyup.enter)="openImage('assets/images/cg.png', 'Change Guardian')"
+      />
     </div>
   </div>
   <div class="item3">
@@ -20,7 +27,14 @@
       <div class="main-title spacer-out-top-m">Agent Management</div>
     </div>
     <div class="img-container">
-      <img src="assets/images/ams.png" alt="Agent Management" />
+      <img
+        src="assets/images/ams.png"
+        alt="Agent Management"
+        tabindex="0"
+        role="button"
+        (click)="openImage('assets/images/ams.png', 'Agent Management')"
+        (keyup.enter)="openImage('assets/images/ams.png', 'Agent Management')"
+      />
     </div>
   </div>
   <div class="item4">
@@ -31,7 +45,14 @@
       </div>
     </div>
     <div class="img-container">
-      <img src="assets/images/ada.png" alt="Active Directory Administrator" />
+      <img
+        src="assets/images/ada.png"
+        alt="Active Directory Administrator"
+        tabindex="0"
+        role="button"
+        (click)="openImage('assets/images/ada.png', 'Active Directory Administrator')"
+        (keyup.enter)="openImage('assets/images/ada.png', 'Active Directory Administrator')"
+      />
     </div>
   </div>
   <div class="item5">
@@ -45,6 +66,10 @@
       <img
         src="assets/images/dra.png"
         alt="Directory and Resource Administrator"
+        tabindex="0"
+        role="button"
+        (click)="openImage('assets/images/dra.png', 'Directory and Resource Administrator')"
+        (keyup.enter)="openImage('assets/images/dra.png', 'Directory and Resource Administrator')"
       />
     </div>
   </div>

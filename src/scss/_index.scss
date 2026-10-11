@@ -27,3 +27,12 @@ body {
 @import "patterns/icons";
 @import "patterns/spacers";
 @import "patterns/utility";
+
+// removes the default Material dialog padding so the image fills the panel
+.image-dialog-panel .mat-mdc-dialog-container .mdc-dialog__surface {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+}
+

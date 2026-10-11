@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  position: relative;
+  line-height: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.dialog-image {
+  display: block;
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
